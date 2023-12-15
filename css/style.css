@@ -1,0 +1,121 @@
+/* Remove browser defaults */
+* {margin:0;padding:0}
+body {margin:auto}
+
+/* Styling for header section*/
+h1{display:inline;
+float:left;
+margin-right:875pt;
+margin-left:10pt;
+font-size:60pt}
+
+#contactUsID{display:block; margin-left:60pt;}
+
+header {list-style-type:none}
+
+#regPageID, #loginPageID{float:left;text-align:center; font-size:16pt; margin-top:20pt}
+
+#regPageID,#loginPageID{margin-right:60pt}
+
+/* Styling for entire page*/
+header, body{background:#b3cccc;font-family:Verdana, sans-serif}
+body{width:1300}
+
+
+
+
+/* Nav Styling - Add more*/
+nav{margin-left:30pt}
+nav  {margin-top:15px; margin-bottom:120px;}
+nav {height:30px}
+nav {font-family: Verdana, sans-serif; font-size: 14pt;}
+ nav ul {list-style-type:none}
+nav ul li {float:left;width:250px;text-align:right}
+nav ul li a {display:block;padding:8px}
+
+
+/* Positioning (Float, Display and Clear) */
+nav, main, header {clear:both}
+
+/* Search Bar Styling*/
+.container{ margin-left:90pt;
+margin-bottom:60pt;
+margin-top:20pt;
+}
+
+#searchButton{display:flex;
+width:1600px;
+height:45px;}
+
+#searchButton input{flex:1;
+border:none;
+outline:none;
+padding:5px;}
+
+#searchButton button{
+	background:tomato;
+	padding:10px 50px; 
+	border:none;
+	outline:none;
+	color: #fff;
+	cursor:pointer;
+letter-spacing:1px;}
+
+
+
+/* Styling for products of the month columns*/
+
+h2{float:left; display:inline; margin-left:10pt}
+#product1Image, #product2Image, #product3Image{width:170pt; height:150pt; float:left; display:block; padding-bottom:10pt}
+
+#product1Image{margin-left:120pt;}
+
+#product2Image{margin-left:160pt}
+
+#product3Image{margin-left:160pt; }
+
+
+#product1ID,#product2ID ,#product3ID {list-style-type:none; display:inline}
+
+
+
+
+/* Styling for registration page*/
+#regHead{margin-left:620pt;
+  margin-top:10px;
+  padding-bottom:10pt;}
+  #regH2{margin-left:650pt;
+  padding-bottom:50pt;
+  }
+
+#regForm{
+
+width:40pt;
+display:inline;
+length:100pt;
+size:10pt;
+width:400pt;
+margin-top:20pt
+}
+
+
+#regForm button {height:30px;width:300px; display:block; margin-bottom:10pt }
+
+#homeRegLink {margin-bottom:10pt; display:block}
+
+#DOBreg{width:125pt; height:15pt}
+
+#sectionReg{
+  border: 2px solid black;
+  border-radius: 5px;
+  width:450px;
+  height:450px;
+  padding-top:100px;
+}
+
+
+@media (max-width:1500px){
+    body, header{
+		zoom:82%;
+    }
+}
