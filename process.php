@@ -3,6 +3,8 @@
 
 
 <?php
+session_start();
+
         $userName = $_POST["username"];
     $firstName = $_POST["firstname"];
     $surName = $_POST["surname"];
@@ -18,6 +20,7 @@
         
         $conn=mysqli_connect($servername, $username, $password, $dbname);
     
+      
 	  if (!$conn) { 
     die("Connection failed: " . mysqli_connect_error()); } 
 
@@ -42,10 +45,14 @@ else{
 
     $redirect = TRUE;
 if ($redirect) {
-   header('Location: https://github.com/LordLoganM/implementation');
+   header('http://localhost/implementation/RegisteredHome.html');
    die();}
 
 }
+
+$_SESSION["userName"]= $userName;
+$_SESSION["password"] = $userPassword; 
+$_SESSION["firstname"] = $firstName; 
 ?>
 
 
