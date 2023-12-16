@@ -153,4 +153,34 @@ font-size: 18pt;}
   #profileImage{margin-top: 10pt;}
 
 
+/* Styling for login page*/
+  
+#loginForm{
+    width:40pt;
+    display:inline;
+    size:25pt;
+    font-size:20pt;
+    margin-top:20pt
+    }
 
+    #loginHead{margin-left:620pt;
+      margin-top:10px;
+      padding-bottom:10pt;}
+
+      
+      #loginH2{margin-left:640pt;
+      padding-bottom:50pt;
+      font-size:25pt;}
+
+      #sectionLogin{
+        border: 2px solid black;
+        border-radius: 5px;
+        width:600px;
+        height:300px;
+        padding-top:100px;
+      }
+
+      #loginForm button {height:30px;width:300px; display:block; margin-bottom:10pt }
+
+      .passLog{margin-bottom: 20pt;}
+      

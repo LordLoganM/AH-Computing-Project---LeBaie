@@ -51,8 +51,9 @@ if ($redirect) {
 }
 
 $_SESSION["userName"]= $userName;
-$_SESSION["password"] = $userPassword; 
 $_SESSION["firstname"] = $firstName; 
+$_SESSION["password"] = $userPassword; 
+
 ?>
 
 
