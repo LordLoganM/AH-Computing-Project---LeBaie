@@ -96,11 +96,7 @@ width:400pt;
 margin-top:20pt
 }
 
-#errorUser{  border: 1px ;
-  outline-style: solid;
-  outline-color: red;
 
-}
 
 #regForm button {height:30px;width:300px; display:block; margin-bottom:10pt }
 
@@ -155,7 +151,6 @@ font-size: 18pt;}
   #basketImage {margin-top: 11pt;}
 
   #profileImage{margin-top: 10pt;}
-
 
 
 
