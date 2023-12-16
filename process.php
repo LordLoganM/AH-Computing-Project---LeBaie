@@ -27,7 +27,11 @@ $result= mysqli_query($conn, "SELECT `username` FROM `registration` WHERE `usern
 
   if (mysqli_num_rows($result) >0)
   {
-      echo "<p>Username already exists</p>";}
+      echo "<p>Username already exists</p>";
+      $redirect1 = TRUE;
+      if ($redirect1) {
+         header('Location: http://localhost/implementation/failedReg.html');
+         die();}}
 
 else{
     $sql = "INSERT INTO `registration`  (`username`,`firstname`,`surname`,`DOB`,`password`) 
@@ -38,7 +42,7 @@ else{
 
     $redirect = TRUE;
 if ($redirect) {
-   header('Location: https://www.google.com/');
+   header('Location: https://github.com/LordLoganM/implementation');
    die();}
 
 }
