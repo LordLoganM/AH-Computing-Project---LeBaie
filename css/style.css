@@ -22,8 +22,6 @@ header, body{background:#b3cccc;font-family:Verdana, sans-serif}
 body{width:1300}
 
 
-
-
 /* Nav Styling - Add more*/
 nav{margin-left:30pt}
 nav  {margin-top:15px; margin-bottom:120px;}
@@ -78,7 +76,7 @@ h2{float:left; display:inline; margin-left:10pt}
 #product1ID,#product2ID ,#product3ID {list-style-type:none; display:inline}
 
 
-/* Styling for registration page*/
+/* Styling for registration page (also used in login page)*/
 #regHead{margin-left:620pt;
   margin-top:10px;
   padding-bottom:10pt;}
@@ -166,7 +164,6 @@ font-size: 18pt;}
     #loginHead{margin-left:620pt;
       margin-top:10px;
       padding-bottom:10pt;}
-
       
       #loginH2{margin-left:640pt;
       padding-bottom:50pt;
@@ -183,4 +180,27 @@ font-size: 18pt;}
       #loginForm button {height:30px;width:300px; display:block; margin-bottom:10pt }
 
       .passLog{margin-bottom: 20pt;}
+
       
+/* Styling for listing page*/
+      
+#productCon{margin-bottom:15px;}
+
+#listingNav{margin-bottom:70pt;}
+
+#listingForm{margin-left: 10pt;
+display: block;}
+
+#fileListing{margin-top: 10pt; size:15pt}
+
+#loginForm{
+  
+  display:inline;
+  size:25pt;
+  font-size:20pt;
+  margin-top:20pt
+  }
+
+  #listingSubmit{
+    width:335pt;
+  size:40pt }

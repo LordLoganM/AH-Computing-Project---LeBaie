@@ -16,7 +16,6 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
 
-                
                 $sql = "SELECT `username`,`firstName`, `surname`, `DOB`, `password` FROM `registration` WHERE `username`='".$userName."'";
                 $result = mysqli_query($conn, $sql);   
     
@@ -35,7 +34,7 @@
                     echo "<h3>You are not logged in</h3>";
                     $redirect5 = TRUE;
                     if ($redirect5) {
-                       header('Location: http://localhost/implementation/RegisteredHome.html');
+                       header('Location: http://localhost/implementation/RegisteredHomeLanding.html');
                        die();}}
 
                    
