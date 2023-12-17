@@ -45,7 +45,7 @@ else{
 
     $redirect = TRUE;
 if ($redirect) {
-   header('http://localhost/implementation/RegisteredHome.html');
+   header('Location: http://localhost/implementation/RegisteredHome.html');
    die();}
 
 }

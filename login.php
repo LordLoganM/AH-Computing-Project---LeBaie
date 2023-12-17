@@ -32,24 +32,21 @@
     
                 if ($valid==true){
 
-                    //Building website using echo
-
-                    echo "<h3>You have logged in successfully</h3>";
-                    $redirect = TRUE;
-                    if ($redirect) {
-                        header('http://localhost/implementation/RegisteredHome.html');
-                       die();}
+                    echo "<h3>You are not logged in</h3>";
+                    $redirect5 = TRUE;
+                    if ($redirect5) {
+                       header('Location: http://localhost/implementation/RegisteredHome.html');
+                       die();}}
 
                    
-                }
+                
 
                 else   {
                     echo "<h3>You are not logged in</h3>";
-                $redirect1 = TRUE;
-                if ($redirect1) {
-                   header('Location: http://localhost/implementation/failedLogin.html');
-                   die();}
-                }
+                    $redirect4 = TRUE;
+                    if ($redirect4) {
+                       header('Location: http://localhost/implementation/invalidLogin.html');
+                       die();}}
                 ?>
 
         
