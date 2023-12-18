@@ -113,7 +113,7 @@ margin-top:20pt
 /* Media Query for different devices*/
 @media (max-width:1500px){
     body, header{
-		zoom:82%;
+		zoom:75%;
     }
 }
 
