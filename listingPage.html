@@ -31,9 +31,9 @@
             </nav>
         
             
-                <form id="listingForm" method="POST" action="process.php">
+                <form id="listingForm" method="get" action="process.php">
 
-                    <p>Product Name <input type ="text" size="25" maxlength="20" name="username" value="" required > </p> <br> 
+                    <p>Product Name <input type ="text" size="25" maxlength="20" name="productname" value="" required > </p> <br> 
                     Product condition: <select id="productCon" name="condition"> 
                         <option value="excellent">Excellent</option>
                         <option value="good">Good</option>
@@ -47,8 +47,8 @@
         <textarea name="message" rows="10" cols="58"> </textarea> <br>
 
     Select Image File:
-    <input type="file" id="fileListing" name="image"> <br> <br>
-    <input type="submit" id="listingSubmit" name="submit" size:40pt value="create listing">
+    <input type="file" id="fileListing" name="image" size="40"> <br> <br>
+    <input type="submit" id="listingSubmit" name="submit" size="40" value="create listing">
     </form>
 
 </body>
