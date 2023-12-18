@@ -112,9 +112,10 @@ margin-top:20pt
 
 /* Media Query for different devices*/
 @media (max-width:1500px){
-    body, header{
-		zoom:75%;
-    }
+    body{
+		zoom:78%;}
+    
+    header{zoom:90%;}
 }
 
 /* Styling for about us page (logged and unlogged)*/
