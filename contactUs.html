@@ -28,8 +28,8 @@
         </div>
         
         
-        <!-- Navigation Bar -->
-            <nav>
+        <!-- Navigation Bar (using id from listing page for nav styling) -->
+            <nav id="listingNav">
                 <ul>
                     <li><a id="homePageID" href="RegisteredHome.html">Home</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
@@ -40,8 +40,8 @@
                 </ul>
             </nav>
         
-            <section id="contactUs ">
-          <h3>Contact us</h3>
+           
+          <h3 id="contactHeader">Contact us</h3>
 
           <form id="contactForm" method="get" action="customerQuery.php">
             <p>Username: <input type ="text" size="25" maxlength="10" name="username" value="" required > </p> <br> 
@@ -49,9 +49,9 @@
             <p>Subject: <input  type ="text" maxlength="30"size="24" name="subject" value="" required> </p> <br>
             <P>Please give a description of your issue (250 characters):</P><br>
             <textarea name="issue" rows="10" cols="58"> </textarea> <br>
-            <button type="submit">Submit </button>
+            <button type="submit" id="contactSubmit">Submit </button>
             
             </form>
-            </section>
+           
 </body>
 </html>

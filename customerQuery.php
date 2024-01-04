@@ -22,16 +22,16 @@ $dbname="leBaieBase";
     die("Connection failed: " . mysqli_connect_error()); } 
 
 
-    $sql = "INSERT INTO `contactUs`  (`email`,`username`,`subject`,`issueDescription`) 
-    VALUES('$email','$subject','$issueDes')";
+    
   
 
   $result= mysqli_query($conn, "SELECT `username` FROM `registration` WHERE `username`='".$userName."'");
 
+  $sql = "INSERT INTO `contactUs`  (`username`,`email`,`subject`,`issueDescription`) 
+  VALUES('$userName','$email','$subject','$issueDes')";
+  
   if (mysqli_num_rows($result) >0)
   {
-    
-
     $redirect = TRUE;
 if ($redirect) {
    header('Location: http://localhost/implementation/RegisteredHomeContact.html');

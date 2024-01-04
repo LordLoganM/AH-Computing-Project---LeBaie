@@ -208,3 +208,12 @@ display: block;}
   size:50pt }
 
   /* Styling for Contact Us page*/
+
+  #contactHeader{margin-bottom: 15pt;
+  margin-left: 15pt ;}
+  #contactForm{margin-left:15pt}
+
+  #contactSubmit{
+    width:335pt;
+  size:50pt;
+margin-top: 10pt;}
