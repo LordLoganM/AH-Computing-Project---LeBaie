@@ -32,14 +32,14 @@ $dbname="leBaieBase";
   {
     $redirect = TRUE;
 if ($redirect) {
-   header('Location: http://localhost/implementation/RegisteredHomeContact.html');
+   header('Location: http://localhost/implementation/RegisteredHomeContact.php');
    die();}
 
 }
 
     else{  $redirect1 = TRUE;
         if ($redirect1) {
-           header('Location: http://localhost/implementation/homeContact.html');
+           header('Location: http://localhost/implementation/homeContact.php');
            die();}}}
         
 

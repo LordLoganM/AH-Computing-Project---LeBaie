@@ -6,23 +6,19 @@
 <link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
 <script>
 
-function myFunction() {
-  alert("Account created/logged in!");}
-  </script>
-</head>
-
-<body onload="myFunction()">
-
-  <!-- Page Header -->
-  <header>
-    <h1 class="loggedHeader">leBaie</h1>
-    <li><a id="listProduct" href="listingPage.html">List Product</a></li>
-    <li><a id="profileImage" href="profile.html"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
- <li><a id="basketImage" href="basket.html">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
-   
-
-    <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
-    </header>
+	function myFunction() {
+	  alert("Query Submitted!");}
+	  </script>
+	</head>
+	
+	<body onload="myFunction()">
+<!-- Page Header -->
+<header>
+<h1>leBaie</h1>
+<li><a id="regPageID" href="registrationPage.html">Register Here</a></li>
+<li><a id="loginPageID" href="loginPage.html">Login Here</a></li> <br><br><br><br><br><br>
+<li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
+</header>
 
 
 <!--  search bar and search button -->
@@ -37,8 +33,8 @@ function myFunction() {
 <!-- Navigation Bar -->
 	<nav>
 		<ul>
-			<li><a id="homePageID" href="RegisteredHome.html">Home</a></li>
-			<li><a href="aboutUs.html">About Us</a></li>
+			<li><a id="homePageID" href="home.php">Home</a></li>
+			<li><a href="UnloggedAboutUs.html">About Us</a></li>
 			<li><a href="clothingPage.html">Clothing</a></li>
 			<li><a href="electronicsPage.html">Electronics</a></li>
 			<li><a href="gamesPage">Games</a></li>
