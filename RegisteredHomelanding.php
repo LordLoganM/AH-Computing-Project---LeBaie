@@ -6,12 +6,12 @@
 <link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
 <script>
 
-	function myFunction() {
-	  alert("Query Submitted!");}
-	  </script>
-	</head>
-	
-	<body onload="myFunction()">
+function myFunction() {
+  alert("Account created/logged in!");}
+  </script>
+</head>
+
+<body onload="myFunction()">
 
   <!-- Page Header -->
   <header>
@@ -37,8 +37,8 @@
 <!-- Navigation Bar -->
 	<nav>
 		<ul>
-			<li><a id="homePageID" href="RegisteredHome.html">Home</a></li>
-			<li><a href="UnloggedAboutUs.html">About Us</a></li>
+			<li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
+			<li><a href="aboutUs.html">About Us</a></li>
 			<li><a href="clothingPage.html">Clothing</a></li>
 			<li><a href="electronicsPage.html">Electronics</a></li>
 			<li><a href="gamesPage">Games</a></li>
