@@ -7,7 +7,7 @@ session_start();
 <html>
 <head>
 
-    <title>Untitled</title>
+    <title>Lebaie</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
 
@@ -27,7 +27,7 @@ session_start();
 
 <!--  search bar and search button -->
 <div class="container">
-<form id="searchButton">
+<form id="searchButton" method="GET" action="results.php">
 <input type="text" placeholder="Search leBaie">
 <button type="submit">Search</button>
 </form>
@@ -46,14 +46,7 @@ session_start();
             <div class="resultsDiv">
 
   
-                <?php
-
-                if(isset($_SESSION["logged_in"])!=true){
-                    echo "<p>Sorry, you have been logged out</p>";
-                } 
-                else{
-                
-                
+                <?php 
                
             $servername="localhost";
             $username="root";
@@ -86,7 +79,7 @@ session_start();
 
 
 
-                    $sql = "SELECT `AssessmentCode`, `Title`, `AssessmentType`, `Duration`, `Setter`, `Pass Mark` FROM `assessment` WHERE `Title` like'%$userTitle%' AND `AssessmentType`='$userType'";
+                    $sql = "SELECT `username`,`firstName`, `surname`, `DOB`, `password` FROM `storeFront`";
                     $result = mysqli_query($conn, $sql);
 
 
