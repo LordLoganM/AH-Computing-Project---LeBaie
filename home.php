@@ -20,7 +20,7 @@
 <!--  search bar and search button -->
 <div class="container">
 <form id="searchButton" method="GET" action="results.php"> 
-<input type="text" placeholder="Search leBaie">
+<input type="text" placeholder="Search leBaie" name="search">
 <button type="submit">Search</button>
 </form>
 </div>

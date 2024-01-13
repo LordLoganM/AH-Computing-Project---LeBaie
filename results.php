@@ -54,22 +54,15 @@ session_start();
             $dbname="leBaieBase";
         
 
-                if ($_SERVER["REQUEST_METHOD"] == "GET") {    
-                    $userTitle=$_GET['Title'];
-                    $userType=$_GET['Type'];
-                }
+                    $userSearch=$_GET["search"];
+                  
                 //Building website using echo
 
-                if ($userTitle==""){
-	               echo "You forgot to enter a Title";}
-
-                else
-                {
-
-
+              
+	        
                     //Results now displayed
-                    echo "<h2>Find Assessment</h2>";    
-                    echo "Results for ".$userTitle." from the category: ".$userType;
+                    echo "<h2>Results</h2>";    
+                
                     // Create connection
                     $conn = mysqli_connect($servername, $username, $password, $dbname);
                     // Check connection
@@ -79,25 +72,22 @@ session_start();
 
 
 
-                    $sql = "SELECT `username`,`firstName`, `surname`, `DOB`, `password` FROM `storeFront`";
+                    $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`";
                     $result = mysqli_query($conn, $sql);
 
 
 
                     if (mysqli_num_rows($result) > 0) {
 	                    echo "<table border='1'>";
-	                    echo "<tr>";
-	                    echo "<th>Code</th>";
-                        echo "<th>Title</th>";
-                        echo "<th>Assessment Type</th>";
-                        echo "<th>Duration</th>";
-                        echo "<th>Setter</th>";
-                        echo "<th>Pass Mark</th>";
+	                    echo "<th>Product Name:</th>";
+                        echo "<th>Price</th>";
+                        echo "<th>Image</th>";
+                       
          
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
         
-	                       echo "<tr><th>". $row["AssessmentCode"]. "</th> <th> " . $row["Title"]. "</th> <th>". $row["AssessmentType"]. "</th><th>". $row["Duration"]. "</th><th>". $row["Setter"]. "</th><th>". $row["Pass Mark"]. "</th></tr>";
+                            echo "<tr><th>". $row["productName"]. "</th> <th> " . $row["price"]. "</th> <th>". $row["image"]. "</th></tr>";
                         }
 		                echo "</table>";
 
@@ -114,15 +104,7 @@ session_start();
                     mysqli_close($conn);
 
 
-                }
 
-
-                echo"<p>";
-
-                echo"<a href='FindAssessment.php'>Return to search page</a>";
-
-                }
-                
                 ?>
  
             </div>        

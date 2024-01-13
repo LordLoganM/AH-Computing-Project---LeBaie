@@ -6,11 +6,11 @@
 session_start();
 
  
-$userName = $_GET["productname"];
-$firstName = $_GET["condition"];
-$surName = $_GET["price"];
-$dateOfBirth = $_GET["message"];
-$userPassword = $_GET["image"];
+$userProduct = $_GET["productname"];
+$condition = $_GET["condition"];
+$price = $_GET["price"];
+$message = $_GET["message"];
+$image = $_GET["image"];
 
 $servername="localhost";
 $username="root";
@@ -24,11 +24,11 @@ $dbname="leBaieBase";
     die("Connection failed: " . mysqli_connect_error()); } 
 
 
-    $sql = "INSERT INTO `products`  (`productName`,`productCa`,`surname`,`DOB`,`password`) 
-    VALUES('$userName','$firstName','$surName','$dateOfBirth','$userPassword')";
+    $sql = "INSERT INTO `products`  (`productName`,`productCategory`,`price`,`description`,`image`) 
+    VALUES('$userProduct','$condition','$surName','$price', '$message', '$image')";
   
   if(mysqli_query($conn, $sql)) {
-    echo "New account created successfully";} 
+    echo "Product Listed";} 
 
     $redirect = TRUE;
 if ($redirect) {
