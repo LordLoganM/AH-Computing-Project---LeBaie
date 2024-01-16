@@ -31,13 +31,21 @@
 
 session_start();
 
-$_SESSION["userName"] = $updateUser
-$_SESSION["firstName"] = $updateForename
-$_SESSION["surName"] =  $updateSurname 
-$_SESSION["dateOfBirth"] = $updateDOB 
-$_SESSION["userPassword"] =   $updatePass   
+$_SESSION["userName"] = $updateUser;
+$_SESSION["firstName"] = $updateForename;
+$_SESSION["surName"] =  $updateSurname;
+$_SESSION["dateOfBirth"] = $updateDOB;
+$_SESSION["userPassword"] =   $updatePass;
 
-$username=$updateUser
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="leBaieBase";
+
+$conn=mysqli_connect($servername, $username, $password, $dbname);
+
+
+$username=$updateUser;
 if (isset($_SESSION["firstName"])){
 
 echo "<h2>Heres a look at your profile".$username.".</h2>";
