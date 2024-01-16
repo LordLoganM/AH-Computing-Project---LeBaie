@@ -11,7 +11,11 @@ session_start();
     $dateOfBirth = $_POST["DOB"];
     $userPassword = $_POST["password"];
 
-
+    $_SESSION["userName"] = $userName;
+    $_SESSION["firstName"] = $firstName;
+    $_SESSION["surName"] =  $surName;
+    $_SESSION["dateOfBirth"] = $dateOfBirth;
+    $_SESSION["userPassword"] =   $userPassword;
 
             $servername="localhost";
             $username="root";
@@ -49,10 +53,6 @@ if ($redirect) {
    die();}
 
 }
-
-$_SESSION["userName"]= $userName;
-$_SESSION["firstname"] = $firstName; 
-$_SESSION["password"] = $userPassword; 
 
 ?>
 

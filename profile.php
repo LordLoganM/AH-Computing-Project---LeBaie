@@ -8,15 +8,13 @@
         
         <body>
         
-        <!-- Page Header -->
+
         <header>
-            <h1 class="loggedHeader">leBaie</h1>
-         
-        
-            <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
-            </header>
+<h1 id="profileH1">leBaie</h1>
+</header>
+
         <!-- Navigation Bar -->
-            <nav id="listingNav">
+            <nav id="profileNav">
                 <ul>
                     <li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
@@ -31,11 +29,11 @@
 
 session_start();
 
-$_SESSION["userName"] = $username;
-$_SESSION["firstName"] = $forename;
-$_SESSION["surName"] =  $surname;
-$_SESSION["dateOfBirth"] = $dob;
-$_SESSION["userPassword"] =   $pass;
+ $username = $_SESSION["userName"]; 
+ $forename = $_SESSION["firstName"];
+ $surname = $_SESSION["surName"] ;
+$dob = $_SESSION["dateOfBirth"];
+$pass = $_SESSION["userPassword"]; 
 
 $servername="localhost";
 $username="root";
@@ -48,14 +46,12 @@ $conn=mysqli_connect($servername, $username, $password, $dbname);
 
 if (isset($_SESSION["firstName"])){
 
-
-        echo "<form id="editButton" action="editPage.php">";
-        echo "<button type="submit">Edit</button>";
-
-    echo"<section id="profileInfo">";
     echo "<h2>Heres a look at your profile".$username.".</h2>";
 
+    echo "<form id='editButton' action='editPage.php'>";
+    echo "<button type='submit'>Edit</button>";
 
+    echo"<section id='profileInfo'>";
     echo "<p>Username:".$username.".</p>";
     echo "<p>Forename:".$forename.".</p>";
     echo "<p>Surname:".$surname.".</p>";
@@ -63,12 +59,8 @@ if (isset($_SESSION["firstName"])){
     echo "<p>password:".$pass.".</p>";
     echo"</section>";
     }
-
-
     ?>
 
-            
-              
-
+        
 </body>
 </html>
