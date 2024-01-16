@@ -34,20 +34,22 @@
                 <form id="listingForm" method="get" action="listing.php">
 
                     <p>Product Name <input type ="text" size="25" maxlength="20" name="productname" value="" required > </p> <br> 
-                    Product condition: <select id="productCon" name="condition"> 
+                    Product condition: <select id="productCon" name="condition" required> 
+                        <option value=""></option>
                         <option value="excellent">Excellent</option>
                         <option value="good">Good</option>
                         <option value="meh">Meh</option>
                         <option value="poor">Poor</option>
                     </select>
-
-                    Product Category: <select id="productCat" name="category" size="4"> 
-                        <option value="electronics">electronics</option>
-                        <option value="vehicle">vehicle</option>
-                        <option value="instrument">instrument</option>
-                        <option value="clothing">clothing</option>
-                        <option value="games">game</option>
-                        <option value="other">other</option>
+<br>
+                    Product Category: <select id="productCat" name="category" required > 
+                        <option value=""></option>
+                        <option value="electronics">Electronics</option>
+                        <option value="vehicle">Vehicle</option>
+                        <option value="instrument">Instrument</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="games">Games</option>
+                        <option value="other">Other</option>
                     </select>
                         
                         

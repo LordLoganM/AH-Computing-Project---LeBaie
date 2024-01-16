@@ -82,13 +82,17 @@ session_start();
 	                    echo "<th>Product Name:</th>";
                         echo "<th>Price</th>";
                         echo "<th>Image</th>";
-                       
+                   
          
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
         
                             echo "<tr><th>". $row["productName"]. "</th> <th> " . $row["price"]. "</th> <th>". $row["image"]. "</th></tr>";
+
+                            $image= $row["image"];
                         }
+
+                        echo"<img src=$image>";
 		                echo "</table>";
 
                     } 
