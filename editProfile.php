@@ -31,11 +31,11 @@
 
 session_start();
 
-$_SESSION["userName"] = $username;
-$_SESSION["firstName"] = $forename;
-$_SESSION["surName"] =  $surname;
-$_SESSION["dateOfBirth"] = $dob;
-$_SESSION["userPassword"] =   $pass;
+$_SESSION["userName"] = $updateUser;
+$_SESSION["firstName"] = $updateForename;
+$_SESSION["surName"] =  $updateSurname;
+$_SESSION["dateOfBirth"] = $updateDob;
+$_SESSION["userPassword"] =   $updatePass;
 
 $servername="localhost";
 $username="root";
@@ -46,21 +46,18 @@ $conn=mysqli_connect($servername, $username, $password, $dbname);
 
 
 
-if (isset($_SESSION["firstName"])){
+if (isset($_SESSION["userName"])){
 
 
-        echo "<form id="editButton" action="editPage.php">";
-        echo "<button type="submit">Edit</button>";
+        echo "<form id="editPageForm" action="editPage.php">";
+       
 
     echo"<section id="profileInfo">";
     echo "<h2>Heres a look at your profile".$username.".</h2>";
 
 
-    echo "<p>Username:".$username.".</p>";
-    echo "<p>Forename:".$forename.".</p>";
-    echo "<p>Surname:".$surname.".</p>";
-    echo "<p>DOB:".$dob.".</p>";
-    echo "<p>password:".$pass.".</p>";
+    
+    echo "<button type="submit">Save</button>";
     echo"</section>";
     }
 
