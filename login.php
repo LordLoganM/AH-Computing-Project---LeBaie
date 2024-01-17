@@ -34,7 +34,7 @@
                     echo "<h3>You are not logged in</h3>";
                     $redirect5 = TRUE;
                     if ($redirect5) {
-                       header('Location: http://localhost/implementation/RegisteredHomeLanding.html');
+                       header('Location: http://localhost/implementation/RegisteredHomeLanding.php');
                        die();}}
 
                    
