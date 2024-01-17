@@ -1,9 +1,13 @@
+<?php
+session_start();
+?>
+	
 <!DOCTYPE html>
 <html>
 
 
 <?php
-session_start();
+
 
         $userName = $_POST["username"];
     $firstName = $_POST["firstname"];
