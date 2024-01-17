@@ -49,7 +49,7 @@ $conn=mysqli_connect($servername, $username, $password, $dbname);
 
 if (isset($_SESSION["firstName"])){
 
-    echo "<h2 id='profileHeading'>Heres a look at your profile ".$forename.".</h2>";
+    echo "<h2 id='profileHeading'>Heres a look at your profile ".$forename."</h2>";
    
     echo"<section class='profileInfo'>";
     echo"<br>";
@@ -64,7 +64,7 @@ if (isset($_SESSION["firstName"])){
     echo "<p>password: ".$pass."</p>";
     echo"</section>";
     echo"<br>";
-    echo "<form action='editPage.php'>";
+    echo "<form action='editProfile.php'>";
     echo "<button  id=editButton type='submit'>Edit Profile </button>";
     echo "</form>";
 

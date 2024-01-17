@@ -238,9 +238,15 @@ width:400pt}
 margin-right:10pt;
 margin-bottom:40pt;
 margin-top:20pt;
-font-size: 25px;}
+font-size: 25px;
+margin-left:10pt}
 
 #editButton {
 margin-left:10pt;
 width:130pt;
 size:20pt;}
+
+#saveProfile{
+  margin-left:10pt;
+  width:180pt;
+  size:20pt;}
