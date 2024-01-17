@@ -221,3 +221,26 @@ display: block;}
 margin-top: 10pt;}
 
 #profileH1{margin-bottom:60pt; }
+
+
+
+  /* Styling for Contact Us page*/
+
+  .profileInfo{  font-size: 20px;
+    font-family:Verdana, sans-serif;
+  margin-left: 10pt;
+  margin-bottom: 10pt;
+ 
+
+width:400pt}
+
+ #profileHeading{display:block;
+margin-right:10pt;
+margin-bottom:40pt;
+margin-top:20pt;
+font-size: 25px;}
+
+#editButton {
+margin-left:10pt;
+width:130pt;
+size:20pt;}

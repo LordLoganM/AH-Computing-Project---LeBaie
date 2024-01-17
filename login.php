@@ -23,7 +23,7 @@
                     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
                     if($row["password"]==$userPassword){
                         $valid=true;
-                        $_SESSION["logged_in"] = true;
+                        
                     }
         
                 }

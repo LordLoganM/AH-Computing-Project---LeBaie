@@ -31,8 +31,8 @@ session_start();
             <?php
 
 
-echo $_SESSION["userName"];
- $username = $_SESSION["userName"]; 
+
+ $uname = $_SESSION["userName"]; 
  $forename = $_SESSION["firstName"];
  $surname = $_SESSION["surName"] ;
 $dob = $_SESSION["dateOfBirth"];
@@ -49,18 +49,25 @@ $conn=mysqli_connect($servername, $username, $password, $dbname);
 
 if (isset($_SESSION["firstName"])){
 
-    echo "<h2>Heres a look at your profile".$username.".</h2>";
-
-    echo "<form id='editButton' action='editPage.php'>";
-    echo "<button type='submit'>Edit</button>";
-
-    echo"<section id='profileInfo'>";
-    echo "<p>Username:".$username.".</p>";
-    echo "<p>Forename:".$forename.".</p>";
-    echo "<p>Surname:".$surname.".</p>";
-    echo "<p>DOB:".$dob.".</p>";
-    echo "<p>password:".$pass.".</p>";
+    echo "<h2 id='profileHeading'>Heres a look at your profile ".$forename.".</h2>";
+   
+    echo"<section class='profileInfo'>";
+    echo"<br>";
+    echo "<p>Username: ".$uname."</p>";
+    echo"<br>";
+    echo "<p>Forename: ".$forename."</p>";
+    echo"<br>";
+    echo "<p>Surname: ".$surname."</p>";
+    echo"<br>";
+    echo "<p>DOB: ".$dob."</p>";
+    echo"<br>";
+    echo "<p>password: ".$pass."</p>";
     echo"</section>";
+    echo"<br>";
+    echo "<form action='editPage.php'>";
+    echo "<button  id=editButton type='submit'>Edit Profile </button>";
+    echo "</form>";
+
     }
     ?>
 
