@@ -31,7 +31,7 @@ session_start();
             <?php
 
 
-
+echo $_SESSION["userName"];
  $username = $_SESSION["userName"]; 
  $forename = $_SESSION["firstName"];
  $surname = $_SESSION["surName"] ;

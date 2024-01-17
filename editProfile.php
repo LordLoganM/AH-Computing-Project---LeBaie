@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,15 +11,13 @@
         
         <body>
         
-        <!-- Page Header -->
+
         <header>
-            <h1 class="loggedHeader">leBaie</h1>
-         
-        
-            <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
-            </header>
+<h1 id="profileH1">leBaie</h1>
+</header>
+
         <!-- Navigation Bar -->
-            <nav id="listingNav">
+            <nav id="profileNav">
                 <ul>
                     <li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
@@ -29,13 +30,14 @@
         
             <?php
 
-session_start();
 
-$_SESSION["userName"] = $updateUser;
-$_SESSION["firstName"] = $updateForename;
-$_SESSION["surName"] =  $updateSurname;
-$_SESSION["dateOfBirth"] = $updateDob;
-$_SESSION["userPassword"] =   $updatePass;
+echo $_SESSION["userName"];
+ $updateUser = $_SESSION["userName"]; 
+ $updateForename = $_SESSION["firstName"];
+ $updateSurname = $_SESSION["surName"] ;
+$updateDob = $_SESSION["dateOfBirth"];
+$updatePass = $_SESSION["userPassword"]; 
+
 
 $servername="localhost";
 $username="root";
