@@ -92,9 +92,11 @@ session_start();
                             $image= $row["image"];
                         }
 
-                        echo"<img src=$image>";
+                       
+       
 		                echo "</table>";
 
+                     echo""   <img src="./image/<?php echo $data['filename']; ?>">
                     } 
 
 
@@ -114,6 +116,7 @@ session_start();
             </div>        
         
 
+            <img src="./image/<?php echo $image; ?>">
         </section>
     
 
