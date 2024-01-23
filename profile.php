@@ -28,7 +28,7 @@ session_start();
                 </ul>
             </nav>
         
-            <?php
+<?php
 
 
 

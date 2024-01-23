@@ -23,21 +23,22 @@ $uname = $_SESSION["userName"];
     
       
 	  if (!$conn) { 
-    die("Connection failed: " . mysqli_connect_error()); } 
+    die("Connection failed: " . mysqli_connect_error()); 
+  } 
 
 
     $sql = "UPDATE `registration` SET `firstname` = $updateForename, `surname` = $updateSurname, `DOB` = $updateDOB, `password` = $updatePass WHERE `username` = '$uname'";
-
+echo $sql;
   
-  if(mysqli_query($conn, $sql)) {
-    echo "account updated";
-
-    $redirect = TRUE;
-if ($redirect) {
-   header('Location: http://localhost/implementation/profile.php');
-   die();}
-
-}
+    if(mysqli_query($conn, $sql)) {
+      echo "New account created successfully";} 
+  
+      $redirect = TRUE;
+  if ($redirect) {
+     header('Location: http://localhost/implementation/profile.php');
+     die();}
+  
+  }
 
 mysqli_close($conn)
 ?>

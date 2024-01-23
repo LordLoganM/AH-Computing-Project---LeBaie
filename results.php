@@ -46,7 +46,7 @@ session_start();
             <div class="resultsDiv">
 
   
-                <?php 
+<?php 
                
             $servername="localhost";
             $username="root";
@@ -111,7 +111,7 @@ session_start();
 
 
 
-                ?>
+?>
  
             </div>        
         

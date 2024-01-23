@@ -1,5 +1,5 @@
 
-            <?php
+ <?php
 
             $userName = $_POST["username"];
             $userPassword = $_POST["password"];
@@ -46,6 +46,6 @@
                     if ($redirect4) {
                        header('Location: http://localhost/implementation/invalidLogin.html');
                        die();}}
-                ?>
+?>
 
         
