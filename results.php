@@ -45,7 +45,6 @@ session_start();
     
             <div class="resultsDiv">
 
-  
 <?php 
                
             $servername="localhost";
@@ -93,12 +92,14 @@ session_start();
                         }
 
                        
+                        echo '<img src=".$image." >';
+                        
        
 		                echo "</table>";
 
-                     echo""   <img src="./image/<?php echo $data['filename']; ?>">
+                       
                     } 
-
+                 
 
                     else {    
 	
@@ -116,13 +117,14 @@ session_start();
             </div>        
         
 
-            <img src="./image/<?php echo $image; ?>">
+            <img src="./media/<?php echo $image; ?>">
         </section>
     
 
     </main> 
 
 
+    <img src="./media/<?php echo $data['filename']; ?>">
     <footer>
         <a href='index.html'>Home</a>  
      </footer>    
