@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
  <?php
 
             $userName = $_POST["username"];
@@ -23,7 +25,11 @@
                     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
                     if($row["password"]==$userPassword){
                         $valid=true;
-                        
+                        $_SESSION["userName"] = $row["username"];
+                        $_SESSION["firstName"] = $row["firstName"];
+                        $_SESSION["surName"] =  $row["surname"];
+                        $_SESSION["dateOfBirth"] = $row["DOB"];
+                        $_SESSION["userPassword"] =   $row["password"];
                     }
         
                 }
@@ -34,7 +40,7 @@
                     echo "<h3>You are not logged in</h3>";
                     $redirect5 = TRUE;
                     if ($redirect5) {
-                       header('Location: http://localhost/implementation/RegisteredHomeLanding.php');
+                        header('Location: http://localhost/implementation/RegisteredHomeLanding.php');
                        die();}}
 
                    
@@ -44,7 +50,7 @@
                     echo "<h3>You are not logged in</h3>";
                     $redirect4 = TRUE;
                     if ($redirect4) {
-                       header('Location: http://localhost/implementation/invalidLogin.html');
+                        header('Location: http://localhost/implementation/invalidLogin.html');
                        die();}}
 ?>
 

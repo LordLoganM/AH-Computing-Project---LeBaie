@@ -14,7 +14,10 @@ session_start();
 
         <header>
 <h1 id="profileH1">leBaie</h1>
+<li><a id="LogOut" href="logout.php">Log Out</a></li>
 </header>
+
+
 
         <!-- Navigation Bar -->
             <nav id="profileNav">

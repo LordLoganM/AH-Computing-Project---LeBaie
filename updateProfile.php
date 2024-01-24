@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-	
+
 <!DOCTYPE html>
 <html>
 
@@ -27,18 +27,22 @@ $uname = $_SESSION["userName"];
   } 
 
 
-    $sql = "UPDATE `registration` SET `firstname` = $updateForename, `surname` = $updateSurname, `DOB` = $updateDOB, `password` = $updatePass WHERE `username` = '$uname'";
+    $sql = "UPDATE `registration` SET `firstname` = '$updateForename', `surname` = '$updateSurname', `DOB` = $updateDOB, `password` = '$updatePass' WHERE `username` = '$uname'";
 echo $sql;
   
     if(mysqli_query($conn, $sql)) {
-      echo "New account created successfully";} 
-  
+      echo "Account updated successfully";} 
+    $_SESSION["firstName"] = $updateForename;
+    $_SESSION["surName"] =  $updateSurname;
+    $_SESSION["dateOfBirth"] = $updateDOB;
+    $_SESSION["userPassword"] =   $updatePass;
       $redirect = TRUE;
   if ($redirect) {
-     header('Location: http://localhost/implementation/profile.php');
-     die();}
-  
+    header('Location: http://localhost/implementation/profile.php');
+     die();
   }
+  
+  
 
 mysqli_close($conn)
 ?>
