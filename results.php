@@ -12,6 +12,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
 
 </head>
+
 <body>
 
     <header>
@@ -50,7 +51,7 @@ session_start();
         <section>
 
     <h2 id="resultsH2">Results</h2>
-    <br>
+    <br><br><br>
 
             <div class="resultsDiv">
 
@@ -88,10 +89,9 @@ session_start();
          
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-        
-                            echo "<tr><th>". $row["productName"]. "</th> <th> " . $row["price"]. "</th> <th>". $row["image"]. "</th></tr>";
-
                             $image= $row["image"];
+                            echo "<tr><th>". $row["productName"]."</th> <th> ".$row["price"]. "</th> <th>". '<img src="media/'.$image.'" class="resultsImage">'. "</th></tr>";
+
                         }
 
               
@@ -99,23 +99,12 @@ session_start();
 
                        
                     } 
-                 
-
-                    else {    
-	
-		                  echo "There were no results matching your search";
-                
-                    }
-
-
+                    
                     mysqli_close($conn);
-
-
-
 ?>
  
             </div>        
-            <img src="./media/<?php echo $row["image"]; ?>">
+           
         </section>
     
 
