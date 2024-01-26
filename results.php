@@ -33,16 +33,25 @@ session_start();
 </form>
 </div>
 
-     <nav>
-    
-    
-     </nav>
+   <!-- Navigation Bar -->
+	<nav>
+		<ul>
+			<li><a id="homePageID" href="home.html">Home</a></li>
+			<li><a href="UnloggedAboutUs.html">About Us</a></li>
+			<li><a href="clothingPage.html">Clothing</a></li>
+			<li><a href="electronicsPage.html">Electronics</a></li>
+			<li><a href="gamesPage">Games</a></li>
+				<li><a href="vehiclesPage.html">Vehicles</a></li> 
+		</ul>
+	</nav>
     
     <main>
             
         <section>
 
-    
+    <h2 id="resultsH2">Results</h2>
+    <br>
+
             <div class="resultsDiv">
 
 <?php 
@@ -55,13 +64,7 @@ session_start();
 
                     $userSearch=$_GET["search"];
                   
-       
-
-              
-	        
-                    //Results now displayed
-                    echo "<h2>Results</h2>";    
-                
+    
                     // Create connection
                     $conn = mysqli_connect($servername, $username, $password, $dbname);
                     // Check connection
@@ -91,10 +94,7 @@ session_start();
                             $image= $row["image"];
                         }
 
-                       
-                        echo '<img src=".$image." >';
-                        
-       
+              
 		                echo "</table>";
 
                        
@@ -115,19 +115,11 @@ session_start();
 ?>
  
             </div>        
-        
-
-            <img src="./media/<?php echo $image; ?>">
+            <img src="./media/<?php echo $row["image"]; ?>">
         </section>
     
 
     </main> 
 
-
-    <img src="./media/<?php echo $data['filename']; ?>">
-    <footer>
-        <a href='index.html'>Home</a>  
-     </footer>    
-    
 </body>
 </html>
