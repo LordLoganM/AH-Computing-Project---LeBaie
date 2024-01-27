@@ -48,5 +48,5 @@ if ($redirect) {
 
 
 
-</body>
+
 </html>

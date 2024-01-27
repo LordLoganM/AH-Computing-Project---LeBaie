@@ -82,20 +82,23 @@ session_start();
 
                     if (mysqli_num_rows($result) > 0) {
 	                    echo "<table border='1'>";
-	                    echo "<th>Product Name:</th>";
-                        echo "<th>Price</th>";
-                        echo "<th>Image</th>";
-                   
+	                    
          
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
                             $image= $row["image"];
-                            echo "<tr><th>". $row["productName"]."</th> <th> ".$row["price"]. "</th> <th>". '<img src="media/'.$image.'" class="resultsImage">'. "</th></tr>";
+                          
+                            echo "<tr>
+ 
+                            <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
+                            <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."</td></div>
+                            
+                           
+                           </tr>";}
+		     
+                        
 
-                        }
-
-              
-		                echo "</table>";
+echo "</table>";
 
                        
                     } 

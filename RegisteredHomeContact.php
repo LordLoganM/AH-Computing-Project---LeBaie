@@ -42,7 +42,7 @@ session_start();
 	<nav>
 		<ul>
 			<li><a id="homePageID" href="RegisteredHomelanding.php">Home</a></li>
-			<li><a href="UnloggedAboutUs.html">About Us</a></li>
+			<li><a href="aboutUs.html">About Us</a></li>
 			<li><a href="clothingPage.html">Clothing</a></li>
 			<li><a href="electronicsPage.html">Electronics</a></li>
 			<li><a href="gamesPage">Games</a></li>

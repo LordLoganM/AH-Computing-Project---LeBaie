@@ -270,11 +270,12 @@ size:20pt;}
     margin-top: 10px;
     margin-left:10pt;
     border-collapse: separate;
-    border-spacing: 10px;
+    border-spacing: 1px;
+    width:50%;
    
     }
     
-    th {
+    tr {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15pt;
     }
@@ -284,14 +285,23 @@ size:20pt;}
     font-size: 12pt;
     border: 1px solid black;
     margin-top: 10pt;
+   
     }
 
-    th, td {
+    tr, td {
       padding-top: 4px;
       padding-right: 60px;
+      border-spacing: 5px;
+
     }
 
-.resultsImage{height:160pt; width:150pt; }
+    .resultsName{font-size: 40pt; width: 90%;}
+
+ 
+
+.resultsImage{height:170pt; width:160pt;  }
+
+.resP{font-size: 18pt;}
 
 #resultsH2{font-size:25pt;
 margin-bottom: 15pt;
