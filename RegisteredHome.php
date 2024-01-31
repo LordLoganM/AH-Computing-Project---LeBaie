@@ -27,9 +27,9 @@ session_start();
     </header>
 
 
-<!--  search bar and search button -->
+<!--  search bar and search button for signed in pages -->
 <div class="container">
-<form id="searchButton">
+<form id="searchButton" method="GET" action="results.php">
 <input type="text" placeholder="Search leBaie">
 <button type="submit">Search</button>
 </form>

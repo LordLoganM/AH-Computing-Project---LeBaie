@@ -25,9 +25,9 @@ session_start();
 </header>
 
 
-<!--  search bar and search button -->
+<!--  search bar and search button for unlogged pages-->
 <div class="container">
-<form id="searchButton">
+<form id="searchButton" method="GET" action="resultsUnlogged.php">
 <input type="text" placeholder="Search leBaie">
 <button type="submit">Search</button>
 </form>
