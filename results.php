@@ -90,7 +90,8 @@ session_start();
                                 echo "<tr>
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
-                                <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br>  
+                                <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br> 
+                       
                                 <button type = 'submit' name = 'btnAddToCart' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button </td></div>
                                 
                             

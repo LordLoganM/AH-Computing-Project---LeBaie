@@ -26,25 +26,25 @@ session_start();
     </header>
 
 
-<!--  search bar and search button for unlogged pages-->
+<!--  search bar and search button for signed in pages -->
 <div class="container">
-<form id="searchButton" method="GET" action="resultsUnlogged.php">
+<form id="searchButton" method="GET" action="results.php">
 <input type="text" placeholder="Search leBaie">
 <button type="submit">Search</button>
 </form>
 </div>
 
    <!-- Navigation Bar -->
-	<nav>
-		<ul>
-			<li><a id="homePageID" href="home.php">Home</a></li>
-			<li><a href="UnloggedAboutUs.html">About Us</a></li>
-			<li><a href="clothingPageUnlogged.php">Clothing</a></li>
-			<li><a href="electronicsPageUnlogged.php">Electronics</a></li>
-			<li><a href="gamesPageUnlogged.php">Games</a></li>
-				<li><a href="vehiclesPageUnlogged.php">Vehicles</a></li> 
-		</ul>
-	</nav>
+ <nav>
+            <ul>
+                <li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="clothingPage.php">Clothing</a></li>
+                <li><a href="electronicsPage.php">Electronics</a></li>
+                <li><a href="gamesPage.php">Games</a></li>
+                    <li><a href="vehiclesPage.php">Vehicles</a></li> 
+            </ul>
+        </nav>
     
     <main>
             
@@ -61,7 +61,7 @@ session_start();
                 $username="root";
                 $password="";
                 $dbname="leBaieBase";
-            
+         
 
                         $userSearch=$_GET["search"];
                     
@@ -74,8 +74,7 @@ session_start();
                         }
 
 
-
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName` like '%$userSearch%'";
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='electronics'";
                         $result = mysqli_query($conn, $sql);
 
 

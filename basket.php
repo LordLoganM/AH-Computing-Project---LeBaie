@@ -19,32 +19,26 @@ session_start();
     <h1 class="loggedHeader">leBaie</h1>
     <li><a id="listProduct" href="listingPage.html">List Product</a></li>
     <li><a id="profileImage" href="profile.html"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
- <li><a id="basketImage" href="basket.php">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
+ <li><a id="basketImage" href="basket.html">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
    
 
     <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
     </header>
 
 
-<!--  search bar and search button for unlogged pages-->
-<div class="container">
-<form id="searchButton" method="GET" action="resultsUnlogged.php">
-<input type="text" placeholder="Search leBaie">
-<button type="submit">Search</button>
-</form>
-</div>
+
 
    <!-- Navigation Bar -->
-	<nav>
-		<ul>
-			<li><a id="homePageID" href="home.php">Home</a></li>
-			<li><a href="UnloggedAboutUs.html">About Us</a></li>
-			<li><a href="clothingPageUnlogged.php">Clothing</a></li>
-			<li><a href="electronicsPageUnlogged.php">Electronics</a></li>
-			<li><a href="gamesPageUnlogged.php">Games</a></li>
-				<li><a href="vehiclesPageUnlogged.php">Vehicles</a></li> 
-		</ul>
-	</nav>
+ <nav>
+            <ul>
+                <li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="clothingPage.php">Clothing</a></li>
+                <li><a href="electronicsPage.php">Electronics</a></li>
+                <li><a href="gamesPage.php">Games</a></li>
+                    <li><a href="vehiclesPage.php">Vehicles</a></li> 
+            </ul>
+        </nav>
     
     <main>
             
@@ -63,7 +57,7 @@ session_start();
                 $dbname="leBaieBase";
             
 
-                        $userSearch=$_GET["search"];
+                        $userBasket=$_GET["btnAddToCart"];
                     
         
                         // Create connection
@@ -75,7 +69,7 @@ session_start();
 
 
 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName` like '%$userSearch%'";
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName`=' $userBasket'";
                         $result = mysqli_query($conn, $sql);
 
 
@@ -95,12 +89,14 @@ session_start();
                                 
                             
         </tr>";}
-    echo "</table>";}
+    echo "</table>";
 
+   echo "<button type='submit' id='basketButton'>Checkout  </button>";}
+            
                        
     else {    
 	
-        echo "There were no results matching your search, sorry!";
+        echo "Your Basket is empty, sorry!";
 
   }
                     
