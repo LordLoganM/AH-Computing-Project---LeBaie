@@ -35,16 +35,16 @@ session_start();
 </div>
 
    <!-- Navigation Bar -->
-	<nav>
-		<ul>
-			<li><a id="homePageID" href="home.html">Home</a></li>
-			<li><a href="UnloggedAboutUs.html">About Us</a></li>
-			<li><a href="clothingPage.html">Clothing</a></li>
-			<li><a href="electronicsPage.html">Electronics</a></li>
-			<li><a href="gamesPage">Games</a></li>
-				<li><a href="vehiclesPage.html">Vehicles</a></li> 
-		</ul>
-	</nav>
+ <nav>
+            <ul>
+                <li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="clothingPage.php">Clothing</a></li>
+                <li><a href="electronicsPage.php">Electronics</a></li>
+                <li><a href="gamesPage.php">Games</a></li>
+                    <li><a href="vehiclesPage.php">Vehicles</a></li> 
+            </ul>
+        </nav>
     
     <main>
             
