@@ -63,7 +63,7 @@ session_start();
                 $dbname="leBaieBase";
          
                 
-                        $userSearch=$_GET["search"];
+                       
                     
             
                             // Create connection
