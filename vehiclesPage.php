@@ -56,7 +56,7 @@ session_start();
             <div class="resultsDiv">
 
 <?php 
-               
+               //sets up db 
                 $servername="localhost";
                 $username="root";
                 $password="";
@@ -73,10 +73,10 @@ session_start();
                             die("Connection failed: " . mysqli_connect_error());
                         }
 
-
+                       //gets values from SQL db table (products) then assigns them to sql
                         $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='vehicle'";
                         $result = mysqli_query($conn, $sql);
-
+                      //querys the db to get all the data for products in the vehicle category 
 
                         if (mysqli_num_rows($result) > 0) {
                             echo "<table border='1'>";
