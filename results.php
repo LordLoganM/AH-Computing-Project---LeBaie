@@ -18,8 +18,8 @@ session_start();
     <header>
     <h1 class="loggedHeader">leBaie</h1>
     <li><a id="listProduct" href="listingPage.html">List Product</a></li>
-    <li><a id="profileImage" href="profile.html"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
- <li><a id="basketImage" href="basket.html">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
+    <li><a id="profileImage" href="profile.php"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
+ <li><a id="basketImage" href="basket.php">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
    
 
     <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
@@ -29,7 +29,7 @@ session_start();
 <!--  search bar and search button for signed in pages -->
 <div class="container">
 <form id="searchButton" method="GET" action="results.php">
-<input type="text" placeholder="Search leBaie">
+<input type="text" placeholder="Search leBaie" name="search">
 <button type="submit">Search</button>
 </form>
 </div>

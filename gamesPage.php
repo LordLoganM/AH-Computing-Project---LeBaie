@@ -29,7 +29,7 @@ session_start();
 <!--  search bar and search button for signed in pages -->
 <div class="container">
 <form id="searchButton" method="GET" action="results.php">
-<input type="text" placeholder="Search leBaie">
+<input type="text" placeholder="Search leBaie" name="search">
 <button type="submit">Search</button>
 </form>
 </div>
@@ -62,30 +62,31 @@ session_start();
                 $password="";
                 $dbname="leBaieBase";
          
-
+                
                         $userSearch=$_GET["search"];
                     
-        
-                        // Create connection
-                        $conn = mysqli_connect($servername, $username, $password, $dbname);
-                        // Check connection
-                        if (!$conn) {
-                            die("Connection failed: " . mysqli_connect_error());
-                        }
+            
+                            // Create connection
+                            $conn = mysqli_connect($servername, $username, $password, $dbname);
+                            // Check connection
+                            if (!$conn) {
+                                die("Connection failed: " . mysqli_connect_error());
+                            }
 
+          //connects to db and assigns values from products table 
+                            $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='games'";
+                            $result = mysqli_query($conn, $sql);
 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='games'";
-                        $result = mysqli_query($conn, $sql);
-
-
-                        if (mysqli_num_rows($result) > 0) {
-                            echo "<table border='1'>";
+                            //repeats for each bit of data thats being displayed in the table 
+                            if (mysqli_num_rows($result) > 0) {
+                                echo "<table border='1'>";
                             
             
                             // output data of each row - uses php variables in order to match users search and concatenate html variables 
                             while($row = mysqli_fetch_assoc($result)) {
                                 $image= $row["image"];
-                            
+                                
+                               //sets up the parameters for information inside the table using html and php variables that were assigned above
                                 echo "<tr>
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>

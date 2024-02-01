@@ -29,7 +29,7 @@ session_start();
 <!--  search bar and search button for signed in pages -->
 <div class="container">
 <form id="searchButton" method="GET" action="results.php">
-<input type="text" placeholder="Search leBaie">
+<input type="text" placeholder="Search leBaie" name="search">
 <button type="submit">Search</button>
 </form>
 </div>
@@ -56,14 +56,14 @@ session_start();
             <div class="resultsDiv">
 
 <?php 
-               
+               //sets up db 
                 $servername="localhost";
                 $username="root";
                 $password="";
                 $dbname="leBaieBase";
          
 
-                        $userSearch=$_GET["search"];
+                        
                     
         
                         // Create connection
@@ -73,11 +73,11 @@ session_start();
                             die("Connection failed: " . mysqli_connect_error());
                         }
 
-
+                       //selects data from db thats in the cloting category then assigns to php variable 
                         $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='Clothing'";
                         $result = mysqli_query($conn, $sql);
 
-
+                        
                         if (mysqli_num_rows($result) > 0) {
                             echo "<table border='1'>";
                             

@@ -18,8 +18,8 @@ session_start();
     <header>
     <h1 class="loggedHeader">leBaie</h1>
     <li><a id="listProduct" href="listingPage.html">List Product</a></li>
-    <li><a id="profileImage" href="profile.html"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
- <li><a id="basketImage" href="basket.html">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
+    <li><a id="profileImage" href="profile.php"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
+ <li><a id="basketImage" href="basket.php">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
    
 
     <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
@@ -68,7 +68,7 @@ session_start();
                         }
 
 
-
+                        //assigns values from sql db to sql which is then used to query the db in order to get results that match parameters of condition 
                         $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName`=' $userBasket'";
                         $result = mysqli_query($conn, $sql);
 
