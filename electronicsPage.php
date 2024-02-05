@@ -74,7 +74,7 @@ session_start();
                         }
 
 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='electronics'";
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productCategory`='electronics'";
                         $result = mysqli_query($conn, $sql);
 
 
