@@ -75,7 +75,7 @@ session_start();
                         }
 
  //selects appopriate information from DB that meets conditions 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName`='Modern Warfare 3' or `productName`='Programming Jumper' or 
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName`='Modern Warfare 3' or `productName`='Programming Jumper' or 
                         `productName`='Radio'";
                         $result = mysqli_query($conn, $sql);
 

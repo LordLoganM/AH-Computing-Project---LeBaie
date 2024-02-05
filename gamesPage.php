@@ -74,7 +74,7 @@ session_start();
                             }
 
           //connects to db and assigns values from products table 
-                            $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='games'";
+                            $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productCategory`='games'";
                             $result = mysqli_query($conn, $sql);
 
                             //repeats for each bit of data thats being displayed in the table 

@@ -1,65 +1,25 @@
-<?php
-// Start the session
-session_start();
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-
-    <title>Lebaie</title>
-
-    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
-
-</head>
-
-<body>
-
-    <header>
-    <h1 class="loggedHeader">leBaie</h1>
-    <li><a id="listProduct" href="listingPage.html">List Product</a></li>
-    <li><a id="profileImage" href="profile.php"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
- <li><a id="basketImage" href="basket.php">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
-   
-
-    <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
-    </header>
-
-
-
-
-   <!-- Navigation Bar -->
- <nav>
-            <ul>
-                <li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="clothingPage.php">Clothing</a></li>
-                <li><a href="electronicsPage.php">Electronics</a></li>
-                <li><a href="gamesPage.php">Games</a></li>
-                    <li><a href="vehiclesPage.php">Vehicles</a></li> 
-            </ul>
-        </nav>
-    
-    <main>
-            
-        <section>
-
-    <h2 id="resultsH2">Basket</h2>
-    <br><br><br>
-
-            <div class="resultsDiv">
 
 <?php 
-               
+           
+// Start the session
+session_start();
+
+$uname = $_SESSION["userName"]; 
+
                 $servername="localhost";
                 $username="root";
                 $password="";
                 $dbname="leBaieBase";
             
 
+                        $prodName=$_GET["prodName"];
+                        $itemCat=$_GET["itemCat"];
+                        
+                        $image=$_GET["image"];
                         $userBasket=$_GET["cartBtn"];
-                    
-        
+
+
                         // Create connection
                         $conn = mysqli_connect($servername, $username, $password, $dbname);
                         // Check connection
@@ -67,11 +27,14 @@ session_start();
                             die("Connection failed: " . mysqli_connect_error());
                         }
 
+                        
+
+
+  $sql = "INSERT INTO `basket`  (`productBasket`,`basketCategory`,`basPrice`,`uname`, `image`) 
+  VALUES('$prodName','$itemCat','$price','$uname','$image')";
 
 
                         $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName` like '%$userBasket%'";
-                       
-                       
                         $result = mysqli_query($conn, $sql);
 
 

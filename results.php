@@ -75,14 +75,14 @@ session_start();
 
 
 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName` like '%$userSearch%'";
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName` like '%$userSearch%'";
                         $result = mysqli_query($conn, $sql);
 
 
                         if (mysqli_num_rows($result) > 0) {
                             echo "<table border='1'>";
                             
-            
+            //look at if product cat cant be input type = text
                             // output data of each row - uses php variables in order to match users search and concatenate html variables 
                             while($row = mysqli_fetch_assoc($result)) {
                                 $image= $row["image"];
@@ -91,9 +91,12 @@ session_start();
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
                                 <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br> 
+                                
                                 <form id='searchButtonRes' method='GET' action='basket.php'>
+                           
                                 <button type = 'submit' name = 'cartBtn' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button> </td></div>
-                            </form>
+                            
+                                </form>
                             
         </tr>";}
     echo "</table>";}

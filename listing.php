@@ -8,9 +8,9 @@ session_start();
  
 $userProduct = $_GET["productname"];
 $itemCategory = $_GET["category"];
-$condition = $_GET["condition"];
+
 $price = $_GET["price"];
-$message = $_GET["message"];
+
 $image = $_GET["image"];
 
 $servername="localhost";
@@ -25,8 +25,8 @@ $dbname="leBaieBase";
     die("Connection failed: " . mysqli_connect_error()); } 
 
 
-    $sql = "INSERT INTO `products`  (`productName`,`productCategory`,`condition`,`price`,`description`,`image`) 
-    VALUES('$userProduct','$itemCategory','$condition','$price', '$message', '$image')";
+    $sql = "INSERT INTO `products`  (`productName`,`productCategory`,`price`,`image`) 
+    VALUES('$userProduct','$itemCategory','$price','$image')";
   
   if(mysqli_query($conn, $sql)) {
     echo "Product Listed";} 

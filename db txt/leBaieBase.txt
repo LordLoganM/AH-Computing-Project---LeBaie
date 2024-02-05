@@ -17,6 +17,12 @@ USE `leBaieBase`;
 CREATE TABLE `contactUs` (`username` VARCHAR(20) NOT NULL, `email` VARCHAR(30), `subject` VARCHAR(30) NOT NULL,  `issueDescription` VARCHAR(250) NOT NULL,
 PRIMARY KEY(`email`),
 FOREIGN KEY(`username`) REFERENCES `registration`(`username`));
+USE `leBaieBase`;
+
+
+
+CREATE TABLE `basket` (`productBasket` VARCHAR(30) NOT NULL, `basketCategory` VARCHAR(20) NOT NULL, `basPrice` FLOAT(4,2) NOT NULL, `uname` VARCHAR(20) NOT NULL, `image` longblob NOT NULL, 
+PRIMARY KEY(`productBasket`));
 
 USE `leBaieBase`;
 

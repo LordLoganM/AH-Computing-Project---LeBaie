@@ -74,7 +74,7 @@ session_start();
                         }
 
                        //gets values from SQL db table (products) then assigns them to sql
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='vehicle'";
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productCategory`='vehicle'";
                         $result = mysqli_query($conn, $sql);
                       //querys the db to get all the data for products in the vehicle category 
 

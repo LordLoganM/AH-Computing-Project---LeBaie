@@ -74,7 +74,7 @@ session_start();
                         }
 
                        //selects data from db thats in the cloting category then assigns to php variable 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productCategory`='Clothing'";
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productCategory`='Clothing'";
                         $result = mysqli_query($conn, $sql);
 
                         
