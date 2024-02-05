@@ -44,7 +44,7 @@ session_start();
             
         <section>
 
-    <h2 id="resultsH2">Results</h2>
+    <h2 id="resultsH2">Basket</h2>
     <br><br><br>
 
             <div class="resultsDiv">
@@ -57,7 +57,7 @@ session_start();
                 $dbname="leBaieBase";
             
 
-                        $userBasket=$_GET["btnAddToCart"];
+                        $userBasket=$_GET["cartBtn"];
                     
         
                         // Create connection
@@ -68,8 +68,8 @@ session_start();
                         }
 
 
-                        //assigns values from sql db to sql which is then used to query the db in order to get results that match parameters of condition 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName`=' $userBasket'";
+
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName` like '%$userBasket%'";
                         $result = mysqli_query($conn, $sql);
 
 
@@ -85,7 +85,7 @@ session_start();
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
                                 <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br>  
-                                <button type = 'submit' name = 'btnAddToCart' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button </td></div>
+                               
                                 
                             
         </tr>";}

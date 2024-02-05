@@ -43,7 +43,7 @@ session_start();
 
 <!-- Product of the Month Section-->
 <div class="POTM"> 
-<h2>Products of the <br>Month</h2> 
+<h2>Product of the <br>Month</h2> 
 
 
 <img id="product1Image" src="media/WIP.png">

@@ -8,7 +8,7 @@ PRIMARY KEY(`username`));
 USE `leBaieBase`;
 
 
-CREATE TABLE `products` (`productName` VARCHAR(30) NOT NULL, `productCategory` VARCHAR(20) NOT NULL, `condition` VARCHAR(20) NOT NULL, `price` FLOAT(4,2) NOT NULL, `description` VARCHAR(250) NOT NULL, `image` longblob NOT NULL, 
+CREATE TABLE `products` (`productName` VARCHAR(30) NOT NULL, `productCategory` VARCHAR(20) NOT NULL, `price` FLOAT(4,2) NOT NULL, `description` VARCHAR(250) NOT NULL, `image` longblob NOT NULL, 
 PRIMARY KEY(`productName`));
 
 USE `leBaieBase`;
