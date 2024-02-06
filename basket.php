@@ -57,9 +57,6 @@ session_start();
                 $dbname="leBaieBase";
             
 
-                        $userBasket=$_GET["cartBtn"];
-                    
-        
                         // Create connection
                         $conn = mysqli_connect($servername, $username, $password, $dbname);
                         // Check connection
@@ -69,7 +66,11 @@ session_start();
 
 
 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName` like '%$userBasket%'";
+                        $sql = "SELECT `productBasket`,`basketCategory`,`basPrice`,`uname`, `image` FROM `products`  
+                        
+                        
+                        
+                        WHERE `productName` like '%$userBasket%'";
                        
                        
                         $result = mysqli_query($conn, $sql);
