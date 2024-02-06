@@ -46,6 +46,7 @@ session_start();
                header('Location: http://localhost/implementation/results.php');
                die();}} 
                          
+               else{echo"error adding to basket";}
                         
 
   
