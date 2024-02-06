@@ -66,11 +66,10 @@ session_start();
 
 
 
-                        $sql = "SELECT `productBasket`,`basketCategory`,`basPrice`,`uname`, `image` FROM `products`  
+                        $sql = "SELECT `productBasket`,`basketCategory`,`basPrice`,`uname`, `image` FROM `basket` "; 
                         
-                        
-                        
-                        WHERE `productName` like '%$userBasket%'";
+                      
+                      
                        
                        
                         $result = mysqli_query($conn, $sql);
