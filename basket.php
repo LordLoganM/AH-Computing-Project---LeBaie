@@ -50,7 +50,7 @@ session_start();
             <div class="resultsDiv">
 
 <?php 
-               
+                $uname = $_SESSION["userName"]; 
                 $servername="localhost";
                 $username="root";
                 $password="";
@@ -66,7 +66,7 @@ session_start();
 
 
 
-                        $sql = "SELECT `productBasket`,`basketCategory`,`basPrice`,`uname`, `image` FROM `basket` "; 
+                        $sql = "SELECT `productBasket`,`basketCategory`,`basPrice`,`uname`, `image` FROM `basket` WHERE `uname` = '$uname'";
                         
                       
                       
@@ -86,14 +86,17 @@ session_start();
                                 echo "<tr>
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
-                                <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br>  
-                               
+                                <td class='resultsName'>". $row['productBasket']. '<br> <div class="resP">£' .$row['basPrice']."<br>  
+                                <form id='searchButtonRes' method='GET' action='basketRemove.php'>
+                                <button type = 'submit' name = 'removeBtn' Value = ".$row["productBasket"]. " 'class= 'resultsButton'>Remove from basket</button> </td></div>
+                            
+                                </form>
                                 
                             
         </tr>";}
     echo "</table>";
-
-   echo "<button type='submit' id='basketButton'>Checkout  </button>";}
+echo "<br>";
+   echo "<button type='submit' class='basketButton'>Checkout  </button>";}
             
                        
     else {    

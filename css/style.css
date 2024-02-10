@@ -110,7 +110,7 @@ margin-top:20pt
   padding-top:100px;
 }
 
-/* Media Query for different devices*/
+/* Media Query for different devices (for screens less than 1500, zoom website will zoom further out)*/
 @media (max-width:1500px){
     body{
 		zoom:78%;}
@@ -199,7 +199,7 @@ font-family: Verdana, sans-serif; font-size: 17pt;}
 
 #listingNav{margin-bottom:70pt;}
 
-#listingForm{margin-left: 10pt;
+#listingForm{
 display: block;}
 
 #fileListing{margin-top: 10pt; size:15pt}
@@ -302,3 +302,9 @@ size:20pt;}
 margin-bottom: 15pt;
 display: block;
 text-decoration: underline;}
+
+
+  /* Styling for basket page*/
+
+  .basketButton{size:40pt;
+    height:30px; width:975px; margin:5pt; }

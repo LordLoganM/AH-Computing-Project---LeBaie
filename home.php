@@ -46,11 +46,50 @@ session_start();
 <h2>Product of the <br>Month</h2> 
 
 
-<img id="product1Image" src="media/WIP.png">
-<img id="product2Image" src="media/WIP.png">
-<img id="product3Image" src="media/WIP.png">
+<?php 
+               
+                $servername="localhost";
+                $username="root";
+                $password="";
+                $dbname="leBaieBase";
+         
 
-	
+                        
+                    
+        
+                        // Create connection
+                        $conn = mysqli_connect($servername, $username, $password, $dbname);
+                        // Check connection
+                        if (!$conn) {
+                            die("Connection failed: " . mysqli_connect_error());
+                        }
+
+ //selects appopriate information from DB that meets conditions 
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName`='Modern Warfare 3' or `productName`='Programming Jumper' or 
+                        `productName`='Radio'";
+                        $result = mysqli_query($conn, $sql);
+
+echo "<section class='ProdOTM'>";
+                        if (mysqli_num_rows($result) > 0) {
+                            echo "<table border='1'>";
+                            
+            
+                            // output data of each row - uses php variables in order to match users search and concatenate html variables 
+                            while($row = mysqli_fetch_assoc($result)) {
+                                $image= $row["image"];
+                            
+                                echo "<tr>
+    
+                                <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
+                                <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br>  
+                                <button type = 'submit' name = 'btnAddToCart' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button </td></div>
+                                
+                            
+        </tr>";}
+    echo "</table>";
+  echo"</section>";}
+
+?>
 
 </div>
 </body>

@@ -91,8 +91,11 @@ session_start();
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
                                 <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br>  
-                                <button type = 'submit' name = 'btnAddToCart' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button </td></div>
-                                
+                                <form id='searchButtonRes' method='GET' action='basketProcess.php'>
+                           
+                                <button type = 'submit' name = 'cartBtn' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button> </td></div>
+                            
+                                </form>
                             
         </tr>";}
     echo "</table>";}
