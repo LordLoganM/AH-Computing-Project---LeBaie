@@ -14,16 +14,15 @@ session_start();
 </head>
 
 <body>
-
-    <header>
-    <h1 class="loggedHeader">leBaie</h1>
-    <li><a id="listProduct" href="listingPage.html">List Product</a></li>
-    <li><a id="profileImage" href="profile.html"><img id="profileImage" src="media/profile-icon-png-908.png"></a></li>
- <li><a id="basketImage" href="basket.php">  <img id="basketImage" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
-   
-
-    <li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
-    </header>
+    
+<!-- Page Header -->
+<header>
+<h1>leBaie</h1>
+<li><a id="regPageID" href="registrationPage.html">Register Here</a></li>
+<li><a id="loginPageID" href="loginPage.html">Login Here</a></li> 
+<li><a id="basketImage" href="basketGuest.php">  <img id="basketImageUnlogged" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
+<li><a id="contactUsID" href="contactUsGuest.html">Contact Us</a></li> <br><br><br>
+</header>
 
 
 <!--  search bar and search button for unlogged pages-->
@@ -54,65 +53,68 @@ session_start();
     <br><br><br>
 
             <div class="resultsDiv">
-
-<?php 
+            <?php 
                
-                $servername="localhost";
-                $username="root";
-                $password="";
-                $dbname="leBaieBase";
-            
-
-                        $userSearch=$_GET["search"];
-                    
-        
-                        // Create connection
-                        $conn = mysqli_connect($servername, $username, $password, $dbname);
-                        // Check connection
-                        if (!$conn) {
-                            die("Connection failed: " . mysqli_connect_error());
-                        }
-
-
-
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `description`, `image` FROM `products`  WHERE `productName` like '%$userSearch%'";
-                        $result = mysqli_query($conn, $sql);
-
-
-                        if (mysqli_num_rows($result) > 0) {
-                            echo "<table border='1'>";
-                            
-            
-                            // output data of each row - uses php variables in order to match users search and concatenate html variables 
-                            while($row = mysqli_fetch_assoc($result)) {
-                                $image= $row["image"];
-                            
-                                echo "<tr>
-    
-                                <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
-                                <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br>  
-                                <button type = 'submit' name = 'btnAddToCart' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button </td></div>
-                                
-                            
-        </tr>";}
-    echo "</table>";}
-
-                       
-    else {    
-	
-        echo "There were no results matching your search, sorry!";
-
-  }
-                    
-                    mysqli_close($conn);
-?>
- 
-            </div>        
+               $servername="localhost";
+               $username="root";
+               $password="";
+               $dbname="leBaieBase";
            
-        </section>
-    
 
-    </main> 
+                       $userSearch=$_GET["search"];
+                   
+       
+                       // Create connection
+                       $conn = mysqli_connect($servername, $username, $password, $dbname);
+                       // Check connection
+                       if (!$conn) {
+                           die("Connection failed: " . mysqli_connect_error());
+                       }
+
+
+
+                       $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName` like '%$userSearch%'";
+                       $result = mysqli_query($conn, $sql);
+
+
+                       if (mysqli_num_rows($result) > 0) {
+                           echo "<table border='1'>";
+                           
+           //look at if product cat cant be input type = text
+                           // output data of each row - uses php variables in order to match users search and concatenate html variables 
+                           while($row = mysqli_fetch_assoc($result)) {
+                               $image= $row["image"];
+                           
+                               echo "<tr>
+   
+                               <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
+                               <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br> 
+                               
+                               <form id='searchButtonRes' method='GET' action='basketProcessGuest.php'>
+                          
+                               <button type = 'submit' name = 'cartBtn' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button> </td></div>
+                           
+                               </form>
+                           
+       </tr>";}
+   echo "</table>";}
+
+                      
+   else {    
+   
+       echo "There were no results matching your search, sorry!";
+
+ }
+                   
+                   mysqli_close($conn);
+?>
+
+           </div>        
+          
+       </section>
+   
+
+   </main> 
 
 </body>
 </html>

@@ -31,7 +31,7 @@ session_start();
                             
                             //sets $result to $row which is a associated array which is then inserted to basket table 
 $row =mysqli_fetch_array($result);
-                            $uname = $_SESSION["userName"]; 
+                           
                             $prod = $row["productName"];
                             $basCat = $row["productCategory"];
                             $price = $row["price"];
@@ -39,7 +39,7 @@ $row =mysqli_fetch_array($result);
 
 
 
-                            $sql = "INSERT INTO `basket`  (`productBasket`,`basketCategory`,`basPrice`,`uname`, `image`)
+                            $sql = "INSERT INTO `guestbasket`  (`guestProdBasket`,`guestBasketCategory`,`guestBasPrice`,`image`)
                             VALUES('$prod','$basCat','$price','$uname','$image')";
                             
 

@@ -1,19 +1,22 @@
 <?php
+// Start the session
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Home Page</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
+
+    <title>Lebaie</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
+
 </head>
 
 <body>
-
-<!-- Page Header -->
-<header>
+    
+ <!-- Page Header -->
+ <header>
 <h1>leBaie</h1>
 <li><a id="regPageID" href="registrationPage.html">Register Here</a></li>
 <li><a id="loginPageID" href="loginPage.html">Login Here</a></li> 
@@ -41,10 +44,15 @@ session_start();
 				<li><a href="vehiclesPageUnlogged.php">Vehicles</a></li> 
 		</ul>
 	</nav>
+    
+    <main>
+            
+        <section>
 
-<!-- Product of the Month Section-->
-<div class="POTM"> 
-<h2>Our Products of the Month</h2> <br><br>
+    <h2 id="resultsH2">Results</h2>
+    <br><br><br>
+
+            <div class="resultsDiv">
 
 <?php 
                
@@ -53,31 +61,31 @@ session_start();
                 $password="";
                 $dbname="leBaieBase";
          
-
-                        
+                
+                       
                     
-        
-                        // Create connection
-                        $conn = mysqli_connect($servername, $username, $password, $dbname);
-                        // Check connection
-                        if (!$conn) {
-                            die("Connection failed: " . mysqli_connect_error());
-                        }
+            
+                            // Create connection
+                            $conn = mysqli_connect($servername, $username, $password, $dbname);
+                            // Check connection
+                            if (!$conn) {
+                                die("Connection failed: " . mysqli_connect_error());
+                            }
 
- //selects appopriate information from DB that meets conditions 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName`='Modern Warfare 3' or `productName`='Programming Jumper' or 
-                        `productName`='Radio'";
-                        $result = mysqli_query($conn, $sql);
+          //connects to db and assigns values from products table 
+                            $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productCategory`='games'";
+                            $result = mysqli_query($conn, $sql);
 
-echo "<section class='ProdOTM'>";
-                        if (mysqli_num_rows($result) > 0) {
-                            echo "<table border='1'>";
+                            //repeats for each bit of data thats being displayed in the table 
+                            if (mysqli_num_rows($result) > 0) {
+                                echo "<table border='1'>";
                             
             
                             // output data of each row - uses php variables in order to match users search and concatenate html variables 
                             while($row = mysqli_fetch_assoc($result)) {
                                 $image= $row["image"];
-                            
+                                
+                               //sets up the parameters for information inside the table using html and php variables that were assigned above
                                 echo "<tr>
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
@@ -88,13 +96,25 @@ echo "<section class='ProdOTM'>";
                             
                                 </form>
                             
-                            
         </tr>";}
-    echo "</table>";
-  echo"</section>";}
+    echo "</table>";}
 
+                       
+    else {    
+	
+        echo "There were no results matching your search, sorry!";
+
+  }
+                    
+                    mysqli_close($conn);
 ?>
+ 
+            </div>        
+           
+        </section>
+    
 
-</div>
+    </main> 
+
 </body>
 </html>

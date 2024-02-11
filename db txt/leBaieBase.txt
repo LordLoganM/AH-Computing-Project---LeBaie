@@ -27,6 +27,12 @@ PRIMARY KEY(`productBasket`));
 USE `leBaieBase`;
 
 
+CREATE TABLE `guestbasket` (`guestProdBasket` VARCHAR(30) NOT NULL, `guestBasketCategory` VARCHAR(20) NOT NULL, `guestBasPrice` FLOAT(4,2) NOT NULL, `image` longblob NOT NULL, 
+PRIMARY KEY(`guestBasket`));
+
+USE `leBaieBase`;
+
+
 
 INSERT INTO `registration` (`username`, `firstname` , `surname`, `DOB`, `password`) VALUES
 ('loganMuir', 'Logan', 'Muir', '01/07/2006', 'password');

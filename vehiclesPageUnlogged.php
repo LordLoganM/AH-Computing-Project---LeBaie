@@ -1,67 +1,22 @@
 <?php
+// Start the session
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Home Page</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
-<script>
 
-	function myFunction() {
-	  alert("Query Submitted!");}
-	  </script>
-	</head>
-	
-	<body onload="myFunction()">
-<!-- Page Header -->
-<header>
-<h1>leBaie</h1>
-<li><a id="regPageID" href="registrationPage.html">Register Here</a></li>
-<li><a id="loginPageID" href="loginPage.html">Login Here</a></li> 
-<li><a id="basketImage" href="basketGuest.php">  <img id="basketImageUnlogged" src="Media/cart.png"> </a></li><br><br><br><br><br><br>
-<li><a id="contactUsID" href="contactUs.html">Contact Us</a></li> <br><br><br>
-</header>
+    <title>Lebaie</title>
 
+    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
 
-<!--  search bar and search button for unlogged pages-->
-<div class="container">
-<form id="searchButton" method="GET" action="resultsUnlogged.php">
-<input type="text" placeholder="Search leBaie" name="search">
-<button type="submit">Search</button>
-</form>
-</div>
-
-
-<!-- Navigation Bar -->
-<nav>
-		<ul>
-			<li><a id="homePageID" href="home.php">Home</a></li>
-			<li><a href="UnloggedAboutUs.html">About Us</a></li>
-			<li><a href="clothingPageUnlogged.php">Clothing</a></li>
-			<li><a href="electronicsPageUnlogged.php">Electronics</a></li>
-			<li><a href="gamesPageUnlogged.php">Games</a></li>
-				<li><a href="vehiclesPageUnlogged.php">Vehicles</a></li> 
-		</ul>
-	</nav>
-
-	<?php
-session_start();
-?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-<title>Home Page</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"> <!--  CSS link -->
 </head>
 
 <body>
 
-<!-- Page Header -->
+   
+  <!-- Page Header -->
 <header>
 <h1>leBaie</h1>
 <li><a id="regPageID" href="registrationPage.html">Register Here</a></li>
@@ -90,13 +45,18 @@ session_start();
 				<li><a href="vehiclesPageUnlogged.php">Vehicles</a></li> 
 		</ul>
 	</nav>
+    
+    <main>
+            
+        <section>
 
-<!-- Product of the Month Section-->
-<div class="POTM"> 
-<h2>Our Products of the Month</h2> <br><br>
+    <h2 id="resultsH2">Results</h2>
+    <br><br><br>
+
+            <div class="resultsDiv">
 
 <?php 
-               
+               //sets up db 
                 $servername="localhost";
                 $username="root";
                 $password="";
@@ -113,12 +73,11 @@ session_start();
                             die("Connection failed: " . mysqli_connect_error());
                         }
 
- //selects appopriate information from DB that meets conditions 
-                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productName`='Modern Warfare 3' or `productName`='Programming Jumper' or 
-                        `productName`='Radio'";
+                       //gets values from SQL db table (products) then assigns them to sql
+                        $sql = "SELECT `productName`,`productCategory`, `price`, `image` FROM `products`  WHERE `productCategory`='vehicle'";
                         $result = mysqli_query($conn, $sql);
+                      //querys the db to get all the data for products in the vehicle category 
 
-echo "<section class='ProdOTM'>";
                         if (mysqli_num_rows($result) > 0) {
                             echo "<table border='1'>";
                             
@@ -131,22 +90,31 @@ echo "<section class='ProdOTM'>";
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
                                 <td class='resultsName'>". $row['productName']. '<br> <div class="resP">£' .$row['price']."<br>  
-                                <form id='searchButtonRes' method='GET' action='basketProcessGuest.php'>
+                                <form id='searchButtonRes' method='GET' action='basketProcess.php'>
                            
                                 <button type = 'submit' name = 'cartBtn' Value = ".$row["productName"]. " 'class= 'resultsPageAdd'>Add To Cart</button> </td></div>
                             
                                 </form>
                             
-                            
         </tr>";}
-    echo "</table>";
-  echo"</section>";}
+    echo "</table>";}
 
+                       
+    else {    
+	
+        echo "There were no results matching your search, sorry!";
+
+  }
+                    
+                    mysqli_close($conn);
 ?>
+ 
+            </div>        
+           
+        </section>
+    
 
-</div>
-</body>
-</html>
+    </main> 
 
 </body>
 </html>
