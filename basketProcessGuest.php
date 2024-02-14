@@ -10,8 +10,9 @@ session_start();
             
 
                         $userBasket=$_GET["cartBtn"];
-                    
-        
+                        $timestamp = time();
+                        $currentDate = gmdate('Y-m-d', $timestamp);
+
                         // Create connection
                         $conn = mysqli_connect($servername, $username, $password, $dbname);
                         // Check connection
@@ -39,8 +40,8 @@ $row =mysqli_fetch_array($result);
 
 
 
-                            $sql = "INSERT INTO `guestbasket`  (`guestProdBasket`,`guestBasketCategory`,`guestBasPrice`,`image`)
-                            VALUES('$prod','$basCat','$price','$uname','$image')";
+                            $sql = "INSERT INTO `guestbasket`  (`guestProdBasket`,`guestBasketCategory`,`guestBasPrice`,`image`, `orderTime`)
+                            VALUES('$prod','$basCat','$price','$image', $currentDate)";
                             
 
                             //querys db and creates delay so that insert works before being redirected to the page they came from  

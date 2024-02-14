@@ -27,8 +27,8 @@ PRIMARY KEY(`productBasket`));
 USE `leBaieBase`;
 
 
-CREATE TABLE `guestbasket` (`guestProdBasket` VARCHAR(30) NOT NULL, `guestBasketCategory` VARCHAR(20) NOT NULL, `guestBasPrice` FLOAT(4,2) NOT NULL, `image` longblob NOT NULL, 
-PRIMARY KEY(`guestBasket`));
+CREATE TABLE `guestbasket` (`guestProdBasket` VARCHAR(30) NOT NULL, `guestBasketCategory` VARCHAR(20) NOT NULL, `guestBasPrice` FLOAT(4,2) NOT NULL, `image` longblob NOT NULL, `orderTime` TIME NOT NULL, 
+PRIMARY KEY(`guestProdBasket`));
 
 USE `leBaieBase`;
 

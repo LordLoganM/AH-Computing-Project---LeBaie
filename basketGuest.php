@@ -54,6 +54,8 @@ session_start();
                 $password="";
                 $dbname="leBaieBase";
             
+                $timestamp = time();
+                $currentDate = gmdate('Y-m-d', $timestamp);
 
                         // Create connection
                         $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -63,8 +65,8 @@ session_start();
                         }
 
 
-
-                        $sql = "SELECT `guestProdBasket`,`guestBasketCategory`,`guestBasPrice`,`image` FROM `guestbasket`";
+//selects items in the db that were added in the last 10 mins, ensuring it is that specifics guests basket
+                        $sql = "SELECT `guestProdBasket`,`guestBasketCategory`,`guestBasPrice`,`image`, `orderTime` FROM `guestbasket` WHERE `orderTime` >= DATEADD(minute, -10, GETDATE());";
                      
                       
                         $result = mysqli_query($conn, $sql);
@@ -81,9 +83,9 @@ session_start();
                                 echo "<tr>
     
                                 <td>". '<img src="media/'.$image.'" class="resultsImage">'. "</td>
-                                <td class='resultsName'>". $row['productBasket']. '<br> <div class="resP">£' .$row['basPrice']."<br>  
+                                <td class='resultsName'>". $row['guestProdBasket']. '<br> <div class="resP">£' .$row['guestBasPrice']."<br>  
                                 <form id='searchButtonRes' method='GET' action='basketRemoveGuest.php'>
-                                <button type = 'submit' name = 'removeBtn' Value = ".$row["productBasket"]. " 'class= 'resultsButton'>Remove from basket</button> </td></div>
+                                <button type = 'submit' name = 'removeBtn' Value = ".$row["guestProdBasket"]. " 'class= 'resultsButton'>Remove from basket</button> </td></div>
                             
                                 </form>
                                 
