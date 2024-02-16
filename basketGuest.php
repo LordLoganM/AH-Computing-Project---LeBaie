@@ -29,7 +29,7 @@ session_start();
    <!-- Navigation Bar -->
  <nav>
             <ul>
-                <li><a id="homePageID" href="RegisteredHome.php">Home</a></li>
+                <li><a id="homePageID" href="home.php">Home</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
                 <li><a href="clothingPage.php">Clothing</a></li>
                 <li><a href="electronicsPage.php">Electronics</a></li>
@@ -48,7 +48,7 @@ session_start();
             <div class="resultsDiv">
 
 <?php 
-                $uname = $_SESSION["userName"]; 
+             
                 $servername="localhost";
                 $username="root";
                 $password="";
@@ -66,7 +66,7 @@ session_start();
 
 
 //selects items in the db that were added in the last 10 mins, ensuring it is that specifics guests basket
-                        $sql = "SELECT `guestProdBasket`,`guestBasketCategory`,`guestBasPrice`,`image`, `orderTime` FROM `guestbasket` WHERE `orderTime` >= DATEADD(minute, -10, GETDATE());";
+                        $sql = "SELECT `guestProdBasket`,`guestBasketCategory`,`guestBasPrice`,`image`, `orderTime` FROM `guestbasket`";
                      
                       
                         $result = mysqli_query($conn, $sql);
