@@ -30,7 +30,7 @@ session_start();
  <nav>
             <ul>
                 <li><a id="homePageID" href="home.php">Home</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="UnloggedaboutUs.html">About Us</a></li>
                 <li><a href="clothingPage.php">Clothing</a></li>
                 <li><a href="electronicsPage.php">Electronics</a></li>
                 <li><a href="gamesPage.php">Games</a></li>
