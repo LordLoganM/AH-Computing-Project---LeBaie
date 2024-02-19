@@ -49,7 +49,7 @@ session_start();
             
         <section>
 
-    <h2 id="resultsH2">Results</h2>
+    <h2 id="resultsH2">Games</h2>
     <br><br><br>
 
             <div class="resultsDiv">

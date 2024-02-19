@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-12-16T15:41:10.497Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="MSI42pKB2NQrPcwkSWFJ" version="22.0.3" type="device">
+<mxfile host="Electron" modified="2024-02-19T21:57:50.692Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="TnS2pg-krgYKbvKj_oOm" version="22.0.3" type="device">
   <diagram name="Page-1" id="ck8E8hJPoGC42zN4GeDB">
-    <mxGraphModel dx="1204" dy="1836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2058" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -40,30 +40,6 @@
         <mxCell id="Sa9khdKqVvLmy_zCqasR-12" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;About Us&amp;nbsp;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="60" y="280" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-13" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="675" y="70" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-14" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="730" y="70" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-15" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="980" y="300" as="sourcePoint" />
-            <mxPoint x="710" y="110" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-16" value="onclick image that takes you to &quot;profile&quot; page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1000" y="300" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-17" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="990" y="240" as="sourcePoint" />
-            <mxPoint x="760" y="110" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-18" value="onclick image that takes you to &quot;basket&quot; page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1000" y="210" width="120" height="50" as="geometry" />
-        </mxCell>
         <mxCell id="Sa9khdKqVvLmy_zCqasR-20" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-195" y="120" width="110" height="110" as="geometry" />
         </mxCell>
@@ -100,23 +76,20 @@
             <mxPoint x="60" y="130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-29" value="&lt;u&gt;List a Product&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="600" y="70" width="60" height="30" as="geometry" />
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-34" value="Here at Lebaie we connect people and build communities to create a opportunity for all. At leBaie, we create pathways to connect and buyers. Lebaie empowers our customers, providing everyone the opportunity to grow, no matter who they are or where they are. And the ripple effect of our work creates waves of changefor our customers, our company, our communities and our planet. Lebaie is a store by the people, for the people &lt;br&gt;&lt;br&gt; Furthermore, we will be sending our code for review as we are dedicated to being as transparent&lt;br&gt;              as possible. After carefully reviewing over every line contained in our program,a determination  will be made decide to what extent leBaie has the qualities it requires to suceed.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="50" y="360" width="590" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-30" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="435" y="-40" width="50" height="50" as="geometry" />
+        <mxCell id="VJPacC8CTdt4iG_xjhQq-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="640" y="410" width="110" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-31" value="internal hyperlink " style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="430" y="-30" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" target="Sa9khdKqVvLmy_zCqasR-29" edge="1">
+        <mxCell id="VJPacC8CTdt4iG_xjhQq-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="VJPacC8CTdt4iG_xjhQq-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="500" y="-10" as="sourcePoint" />
-            <mxPoint x="610" y="50" as="targetPoint" />
+            <mxPoint x="650" y="660" as="sourcePoint" />
+            <mxPoint x="700" y="650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Sa9khdKqVvLmy_zCqasR-34" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Here at Lebaie we connect people and build communities to create a opportunity for all. At Lebaie, we create pathways to connect sellers and buyers. Lebaie empowers our customers, providing everyone the opportunity to grow and thrive — no matter who they are or where they are. And the ripple effect of our work creates waves of change for our customers, our company, our communities and our planet. Lebaie is a store by the people, for the people&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="70" y="320" width="710" height="270" as="geometry" />
+        <mxCell id="VJPacC8CTdt4iG_xjhQq-3" value="image of founder" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="615" y="670" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

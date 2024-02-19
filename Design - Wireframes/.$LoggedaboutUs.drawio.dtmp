@@ -1,0 +1,97 @@
+<mxfile host="Electron" modified="2024-02-19T21:57:52.575Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="AFA6kQrINj9vCrbaUQuQ" version="22.0.3" type="device">
+  <diagram name="Page-1" id="ck8E8hJPoGC42zN4GeDB">
+    <mxGraphModel dx="2058" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="120" y="220" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="39.5" y="42.5" width="761" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-3" value="search Lebaie" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="100" y="170" width="660" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-4" value="&lt;span&gt;Home &lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="138" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-5" value="Electronics " style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="459" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-6" value="Clothing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="354" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-7" value="Vehicles" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="629" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-8" value="About us" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="254" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-9" value="Games" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="549" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-10" value="&lt;span&gt;contact us&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="70" y="110" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-11" value="&lt;span style=&quot;font-size: 35px;&quot;&gt;leBaie&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0" parent="1" vertex="1">
+          <mxGeometry x="70" y="80" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-12" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;About Us&amp;nbsp;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="280" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-20" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-195" y="120" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-21" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-90" y="170" as="sourcePoint" />
+            <mxPoint x="90" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-22" value="text input box for seach with value &quot;search leBaie&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-170" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="285" width="80" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-24" value="Navigation Bar containing internal hyperlinks" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-190" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Sa9khdKqVvLmy_zCqasR-23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="290" as="sourcePoint" />
+            <mxPoint x="110" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-26" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-185" y="40" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-27" value="internal hyperlink " style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-190" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-28" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="80" as="sourcePoint" />
+            <mxPoint x="60" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Sa9khdKqVvLmy_zCqasR-34" value="Here at Lebaie we connect people and build communities to create a opportunity for all. At leBaie, we create pathways to connect and buyers. Lebaie empowers our customers, providing everyone the opportunity to grow, no matter who they are or where they are. And the ripple effect of our work creates waves of changefor our customers, our company, our communities and our planet. Lebaie is a store by the people, for the people &lt;br&gt;&lt;br&gt; Furthermore, we will be sending our code for review as we are dedicated to being as transparent&lt;br&gt;              as possible. After carefully reviewing over every line contained in our program,a determination  will be made decide to what extent leBaie has the qualities it requires to suceed.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="50" y="360" width="590" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="VJPacC8CTdt4iG_xjhQq-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="640" y="410" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VJPacC8CTdt4iG_xjhQq-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="VJPacC8CTdt4iG_xjhQq-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="660" as="sourcePoint" />
+            <mxPoint x="700" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VJPacC8CTdt4iG_xjhQq-3" value="image of founder" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="615" y="670" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
