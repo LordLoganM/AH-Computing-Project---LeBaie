@@ -1,5 +1,5 @@
 <?php
-// Start the session
+
 
 
   //destroys all of the data associated with the current session.
@@ -8,7 +8,7 @@
                
                 echo "<p>You have been logged out</p>"; 
 
-                echo "<p><a href='index.html'>Return to login screen</a></p>";
+                echo "<p><a href='home.php'>Return to login screen</a></p>";
 
                 $redirect1 = TRUE;
       if ($redirect1) {
